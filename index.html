@@ -1,146 +1,131 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <title>Day of Birth Finder</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Twitter Card-->
-    <meta name="twitter:title" content="Day of Birth Finder">
-    <meta name="twitter:site" content="dob-finder.firebaseapp.com" />
-    <meta name="twitter:creator" content="@iambolajiayo" />
-    <meta name="twitter:description" content="This script checks your Date of Birth and detects the Day of the Week you were born.">
-    <meta name="twitter:image" content="img/icons/icon-96x96.png">
-    <meta name="twitter:card" content="img/icons/icon-96x96.png">
-    <meta name="description" content="This script checks your Date of Birth and detects the Day of the Week you were born.">
-    <!--Open Graph-->
-    <meta property="og:image" content="img/icons/icon-96x96.png">
-    <meta property="og:title" content="Day of Birth Finder" />
-    <meta name="author" content="Bolaji Ayodeji">
-    <meta property="og:description" content="This script checks your Date of Birth and detects the Day of the Week you were born." />
-    <meta name="author" content="Bolaji Ayodeji">
-    <meta property="og:url" content="dob-finder.firebaseapp.com" />
-    <meta property="og:site_name" content="Day of Birth Finder" />
-    <meta property="og:type" content="Day of Birth Finder" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Serverless Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|PT+Serif:400,400i,700" rel="stylesheet">
 
-    <!-- start of web manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <!-- end of web manifest -->
+  <!--test-->
 
-    <!-- theme-color -->
-    <meta name="theme-color" content="#fff" />
-    <!-- end-theme-color -->
+  <!-- Twitter Card-->
+  <meta name="twitter:title" content="Day of Birth Finder">
+  <meta name="twitter:site" content="dob-finder.firebaseapp.com" />
+  <meta name="twitter:creator" content="@iambolajiayo" />
+  <meta name="twitter:description" content="This script checks your Date of Birth and detects the Day of the Week you were born.">
+  <meta name="twitter:image" content="img/icons/icon-96x96.png">
+  <meta name="twitter:card" content="img/icons/icon-96x96.png">
+  <meta name="description" content="This script checks your Date of Birth and detects the Day of the Week you were born.">
+  <!--Open Graph-->
+  <meta property="og:image" content="img/icons/icon-96x96.png">
+  <meta property="og:title" content="Day of Birth Finder" />
+  <meta name="author" content="Bolaji Ayodeji">
+  <meta property="og:description" content="This script checks your Date of Birth and detects the Day of the Week you were born." />
+  <meta name="author" content="Bolaji Ayodeji">
+  <meta property="og:url" content="dob-finder.firebaseapp.com" />
+  <meta property="og:site_name" content="Day of Birth Finder" />
+  <meta property="og:type" content="Day of Birth Finder" />
 
-    <!-- Google Knowledge Graph card -->
-    <script type='application/ld+json'>
-        {
-            "@context": "http://www.schema.org",
-            "@type": "Day of Birth Finder",
-            "name": "Day of Birth Finder",
-            "url": "dob-finder.firebaseapp.com",
-            "logo": "dob-finder.firebaseapp.com/img/icons/icon-96x96.png",
-            "description": "This script checks your Date of Birth and detects the Day of the Week you were born."
-        }
-    </script>
-    <!--Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+  <!-- theme-color -->
+  <meta name="theme-color" content="#fff" />
+  <!-- end-theme-color -->
 
-    <!--Main Stylesheet-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
+  <!-- Google Knowledge Graph card -->
+  <script type='application/ld+json'>
+      {
+          "@context": "http://www.schema.org",
+          "@type": "Day of Birth Finder",
+          "name": "Day of Birth Finder",
+          "url": "dob-finder.firebaseapp.com",
+          "logo": "dob-finder.firebaseapp.com/img/icons/icon-96x96.png",
+          "description": "This script checks your Date of Birth and detects the Day of the Week you were born."
+      }
+  </script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="manifest" href="./manifest.json">
 
-    <!--logo-->
-    <link rel="shortcut icon" href="img/icons/icon-96x96.png">
+  <link rel="shortcut icon" href="img/icons/icon-96x96.png">
 
-    <link rel="apple-touch-icon" href="icon-192x192.png">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
+
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Day of Birth Finder</h1>
-        <p class="lead">This script checks your Date of Birth and detects the Day of the Week you were born.</p>
-
-        <hr class="my-4">
+  <header class="site-header">
+    <div class="site-title">
+      <a id="post-view-all">A Serverless Blog</a>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="site-subtitle">
+      All the code that powers this blog is right here.
+    </div>
+    <a id="sign-in-button" class="button sign-in-button">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
+    </svg> Sign In
+  </a>
+    <a id="new-post-button" class="button sign-in-button" style="display:none">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M20.71,4.04C21.1,3.65 21.1,3 20.71,2.63L18.37,0.29C18,-0.1 17.35,-0.1 16.96,0.29L15,2.25L18.75,6M17.75,7L14,3.25L4,13.25V17H7.75L17.75,7Z"></path>
+</svg> New Post
+  </a>
+  </header>
 
-            <form>
+  <main class="site-wrap">
 
-                <div class="alert alert-danger" role="alert">
-                    Enter all dates in numeric format!
-                </div>
+    <section id="new-post" class="article-form" style="display: none;">
+      <h2>New Post</h2>
+      <form id="message-form" action="#">
+        <h4><label for="new-post-title">Title</label></h4>
+        <input type="text" id="new-post-title">
+        <br />
+        <br />
+        <h4><label for="new-post-message">Message</label></h6>
+          <textarea rows="3" id="new-post-content"></textarea>
+          <br />
+          <br />
+          <button type="submit">Add post</button>
+      </form>
+    </section>
 
-
-                <div class="form-group">
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-lg">Day of Birth</span>
-                        </div>
-                        <input type="text" name="day" class="form-control" placeholder="18. ." aria-describedby="inputGroup-sizing-lg">
-                    </div>
-
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-lg">Month of Birth</span>
-                        </div>
-                        <input type="text" name="month" class="form-control" placeholder="8. ." aria-describedby="inputGroup-sizing-lg">
-                    </div>
-
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-lg">Year of Birth</span>
-                        </div>
-                        <input type="text" name="year" class="form-control" placeholder="1970. ." aria-describedby="inputGroup-sizing-lg">
-                    </div>
-                    <br />
-
-                    <button type="button" class="btn btn-primary btn-lg" onclick="compute(this.form)">Submit</button>
-                    <button type="reset" class="btn btn-secondary btn-lg">Clear</button>
-                    <br /><br />
-
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text btn btn-primary" id="basic-addon1">Complete Day of Birth</span>
-                        </div>
-                        <input id="result" type="text" name="result1" class="form-control" aria-describedby="basic-addon1"
-                            readonly>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text btn btn-primary" id="basic-addon1">Final Result</span>
-                        </div>
-                        <input id="result" type="text" name="result2" class="form-control" aria-describedby="basic-addon1"
-                            readonly>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div id="articles-list">
+      <div class="articles-container" />
     </div>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then((reg) => {
-                  console.log('Service worker registered.', reg);
-                });
-          });
-        }
-    </script>
+    <article id="article-whole" class="article-whole start-hidden">
+      <div></div>
+    </article>
 
-    <script src="js/app.js"></script>
+  </main>
 
-<footer>
-    <div class="alert" style="background-color:#ddd;" role="alert">
-        <hr>
-        <!--TODO: Add footer-->
-    </div>
-</footer>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCFruFxC73OqY1Pnj2pnH_92a-WoUjN_EE",
+      authDomain: "thecloudcontext.firebaseapp.com",
+      databaseURL: "https://thecloudcontext.firebaseio.com",
+      projectId: "thecloudcontext",
+      storageBucket: "thecloudcontext.appspot.com",
+      messagingSenderId: "916114181066",
+      appId: "1:916114181066:web:ef1f499b42b7e313405d33"
+    };
+    firebase.initializeApp(config);
+  </script>
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then((reg) => {
+              console.log('Service worker registered.', reg);
+            });
+      });
+    }
+  </script>
+
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
