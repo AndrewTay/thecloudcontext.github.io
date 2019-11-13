@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "thecloudcontext",
+    "staging": "thecloudcontext",
+    "testing": "thecloudcontext"
+  }
+}
