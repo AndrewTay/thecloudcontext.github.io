@@ -3,8 +3,8 @@
 }
 
 .site-header {
-  border-top: 1rem solid #556CF6;
-  background: #26232d;
+  border-top: 1rem solid #0CA3E1;
+  background: #337AB7;
   padding: 2rem;
   position: relative;
 }
@@ -35,7 +35,7 @@
 .article-block {
   max-width: 650px;
   margin: 0 auto 2rem;
-  background: #403E4F;
+  background: #337AB7;
   padding: 2rem;
   box-shadow: 0.25rem 0.25rem 1.3rem rgba(0, 0, 0, 0.33);
 }
@@ -46,13 +46,13 @@ time {
   letter-spacing: 0.25rem;
   background: linear-gradient(
     to right,
-    #4a4c5a,
-    #403E4D
+    #FFFFFF,
+    #0CA3E1
   );
   font-size: 0.75rem;
 }
 .article-body {
-  color: #9e9fa8;
+  color: #337AB7;
 }
 
 .article-whole {
@@ -63,7 +63,7 @@ time {
 
 body {
   margin: 0;
-  background: #323041;
+  background: #FFFFFF;
   color: white;
   font-family: 'PT Serif', serif;
   line-height: 1.4;
@@ -83,7 +83,7 @@ h1 {
   letter-spacing: 0.1rem;
 }
 a {
-  color: #8b9bff;
+  color: #FFFFFF;
   font-weight: bold;
   border-bottom: 1px solid;
   text-decoration: none;
