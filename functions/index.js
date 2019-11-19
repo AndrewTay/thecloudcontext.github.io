@@ -55,8 +55,10 @@ app.get(
           .get()
           .then(snapshot => {
               snapshot.forEach(doc => {
+                  // specify content contains
                   var newElement = {
                     "id": doc.id,
+                    "title": doc.data().title,
                     "content": doc.data().content,
                     "author": doc.data().author,
                     "created": doc.data().created
