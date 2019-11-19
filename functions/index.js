@@ -81,7 +81,7 @@ app.get(
 );
 
 // set the routes up under the /posts/ endpoint
-exports.posts = functions.https.onRequest((req, res) =&gt; {
+exports.posts = functions.https.onRequest((req, res) => {
   // Handle routing of /posts without a trailing /,
   if (!req.path) {
     // prepending "/" keeps query params, path params intact
