@@ -47,6 +47,10 @@ const app = require("express")();
 app.get(
   ["/", "/:id"],
   functions.https.onRequest((req, res) => {
+    const postid = req.params.id;
+    let reference = "posts";
+    reference += postid ? "/" + postid : "";
+
     cors(req, res, () => {
       var stuff = [];
       return admin
@@ -77,4 +81,11 @@ app.get(
 );
 
 // set the routes up under the /posts/ endpoint
-exports.posts = functions.https.onRequest(app);
+exports.posts = functions.https.onRequest((req, res) =&gt; {
+  // Handle routing of /posts without a trailing /,
+  if (!req.path) {
+    // prepending "/" keeps query params, path params intact
+    req.url = `/${req.url}`;
+  }
+  return app(req, res);
+});

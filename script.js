@@ -16,14 +16,30 @@ var loadJsonFromFirebase = function(url, callback) {
 
 var getQueryParam = function(param) {
   let params = window.location.search.substr(1);
-  params = params.split("&");
+  params = params.split("&amp;");
   let paramList = {};
-  for (let i = 0; i < params.length; i++) {
-    let tmp = params[i].split("=");
-    paramList[tmp[0]] = decodeURI(tmp[1]);
+  for (let i = 0; i  {
+  let post_id = e.target.dataset.post;
+  if (post_id) {
+    // load the post from ajax call
+    loadJsonFromFirebase(blog_api_url + '/' + post_id, function(data) {
+      let div = document.createElement('div');
+      let ts = data.created;
+      div.innerHTML = `
+        <h1>${data.title}</h1>
+          ${ts.toDateString()}
+          <div class="article-body">
+            <p>${data.content}</p>
+          </div>
+        `;
+      post_full.replaceChild(div, post_full.firstChild);
+      // hide the full list
+      posts_container.classList.add('start-hidden');
+      // show the single post
+      post_full.classList.remove('start-hidden');
+    });
   }
-  return paramList[param];
-}
+};
 
 const getAnchorParam = function() {
   return (window.location.href.split('#').length > 1) ? window.location.href.split('#')[1] : null;
