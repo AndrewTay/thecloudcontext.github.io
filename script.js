@@ -210,22 +210,3 @@ document.addEventListener("DOMContentLoaded", function() {
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(onLogInOutChange);
 });
-
-// toggle buttons on sign in/out auth changes
-var onLogInOutChange = function(user) {
-  // Ignore token refresh events
-  if (user && currentUID === user.uid) {
-    return;
-  }
-
-  // If logged in, show the new post button
-  if (user) {
-    currentUID = user.uid;
-    document.getElementById("sign-in-button").style.display = "none";
-    document.getElementById("new-post-button").style.display = "block";
-  } else {
-    currentUID = null;
-    document.getElementById("sign-in-button").style.display = "block";
-    document.getElementById("new-post-button").style.display = "none";
-  }
-};
