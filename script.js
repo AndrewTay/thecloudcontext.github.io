@@ -194,3 +194,38 @@ if (post_id) {
     posts_container.insertBefore(list, posts_container.firstChild);
   });
 }
+
+// track authenticated user to avoid triggering on refresh
+var currentUID;
+
+// Bindings on load.
+document.addEventListener("DOMContentLoaded", function() {
+  document
+    .getElementById("sign-in-button")
+    .addEventListener("click", function() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider);
+    });
+
+  // Listen for auth state changes
+  firebase.auth().onAuthStateChanged(onLogInOutChange);
+});
+
+// toggle buttons on sign in/out auth changes
+var onLogInOutChange = function(user) {
+  // Ignore token refresh events
+  if (user && currentUID === user.uid) {
+    return;
+  }
+
+  // If logged in, show the new post button
+  if (user) {
+    currentUID = user.uid;
+    document.getElementById("sign-in-button").style.display = "none";
+    document.getElementById("new-post-button").style.display = "block";
+  } else {
+    currentUID = null;
+    document.getElementById("sign-in-button").style.display = "block";
+    document.getElementById("new-post-button").style.display = "none";
+  }
+};
