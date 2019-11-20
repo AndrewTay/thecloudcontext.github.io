@@ -1,37 +1,7 @@
-// const cors = require('cors')({origin: true});
-//
-// const functions = require('firebase-functions');
-// const admin = require('firebase-admin');
-// admin.initializeApp(functions.config().firebase);
-//
-// const app = require("express")();
-//
-// exports.getPosts = functions.https.onRequest((req, res) => {
-//     var stuff = [];
-//     var db = admin.firestore();
-//     return db.collection("posts")
-//       .get()
-//       .then(snapshot => {
-//           snapshot.forEach(doc => {
-//               var newElement = {
-//                 "id": doc.id,
-//                 "content": doc.data().content,
-//                 "author": doc.data().author,
-//                 "created": doc.data().created
-//               }
-//           stuff = stuff.concat(newElement);
-//         });
-//         var stuffStr = JSON.stringify(stuff);
-//         //console.log("Callback :" + stuffStr);
-//
-//         res.status(200).send(stuffStr);
-//         return null
-//       }).catch(reason => {
-//         res.send(reason);
-//       });
-// });
-
+// Set-up cors
 const cors = require("cors")({ origin: true });
+
+// Clean-up user submitted html
 const sanitizeHtml = require('sanitize-html');
 
 // The Cloud Functions for Firebase SDK to create functions & triggers.
