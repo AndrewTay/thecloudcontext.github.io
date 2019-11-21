@@ -210,3 +210,4 @@ document.addEventListener("DOMContentLoaded", function() {
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(onLogInOutChange);
 });
+//
