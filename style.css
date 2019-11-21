@@ -3,9 +3,8 @@
 }
 
 .site-header {
-  border-top: 1rem solid #0CA3E1;
-  background: #337AB7;
-  padding: 2rem;
+  background: #049BE5;
+  padding: 0.1rem;
   position: relative;
 }
 .site-title > a {
